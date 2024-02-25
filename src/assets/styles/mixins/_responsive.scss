@@ -1,0 +1,36 @@
+// _media-queries.scss
+
+// Mobile devices
+@mixin mobile {
+    @media only screen and (max-width: 575.98px) {
+      @content;
+    }
+  }
+  
+  // Tablet devices
+  @mixin tablet {
+    @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+      @content;
+    }
+  }
+  
+  // Small desktops
+  @mixin laptop {
+    @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+      @content;
+    }
+  }
+  
+  // Large desktops
+  @mixin desktop {
+    @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+  
+  // Extra large desktops
+  @mixin xlDesktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
