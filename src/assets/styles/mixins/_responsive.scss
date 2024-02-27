@@ -1,36 +1,42 @@
 // _media-queries.scss
 
 // Mobile devices
+
+$mobile :576px;
+$tablet :767px;
+$laptop:991px;
+$desktop:1199px;
+$xlDesktop:1200;
 @mixin mobile {
-    @media only screen and (max-width: 575.98px) {
+    @media only screen and (max-width: $mobile) {
       @content;
     }
   }
   
   // Tablet devices
   @mixin tablet {
-    @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    @media only screen and (min-width: $mobile) and (max-width: $tablet) {
       @content;
     }
   }
   
   // Small desktops
   @mixin laptop {
-    @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    @media only screen and (min-width: $tablet) and (max-width: $laptop) {
       @content;
     }
   }
   
   // Large desktops
   @mixin desktop {
-    @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    @media only screen and (min-width: $laptop) and (max-width: $desktop) {
       @content;
     }
   }
   
   // Extra large desktops
   @mixin xlDesktop {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $xlDesktop) {
       @content;
     }
   }
